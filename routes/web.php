@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/user', [UserController::class, 'getuserRecord']);
 Route::get('/', [ProductController::class, 'getProducts']);
+Route::get('/deleteProduct/{id}', [ProductController::class, 'deleteProduct']);
+Route::get('/editProduct/{id}', [ProductController::class, 'editProduct']);
+Route::post('/addProduct', [ProductController::class, 'addProduct']);
+Route::post('/updateProduct', [ProductController::class, 'updateProduct']);
 
 /* Route::get('/', function () {
     return view('app');
